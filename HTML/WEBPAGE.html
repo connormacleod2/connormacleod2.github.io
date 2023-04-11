@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/site.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                beforeShowDay: function (date) {
+                    var events = [
+                        new Date("2023-02-08"),
+                        new Date("2023-02-09")
+                    ];
+                    for (var i = 0; i < events.length; i++) {
+                        if (date.getTime() == events[i].getTime()) {
+                            return [true, 'event-highlight'];
+                        }
+                    }
+                    return [true, ''];
+                }
+            });
+        });
+    </script>
+    <style>
+        .event-highlight {
+            background-color: yellow;
+        }
+
+        #calendar {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="/HTML/IMG/StalkerLogo.webp" class="stalker-logo">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://www.google.com">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <aside class="col-sm-6">
+                <div id="datepicker"></div>
+            </aside>
+            <section class="col-sm-6">
+                <a href="http://www.google.com">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel 1</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>Content goes here</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="http://www.google.com">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel 2</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>Content goes here</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="http://www.google.com">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel 3</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>Content goes here</p>
+                        </div>
+                    </div>
+
+                </a>
+            </section>
+        </div>
+    </main>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
