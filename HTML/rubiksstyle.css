@@ -1,0 +1,103 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --red: rgb(137, 18, 20);
+  --orange: rgb(255, 85, 37);
+  --yellow: rgb(254, 213, 47);
+  --green: rgb(25, 155, 76);
+  --blue: rgb(13, 72, 172);
+}
+button{
+  height:100px;
+  width:200px;
+  font-size:4em;
+  border-width:10px;
+  border-radius:5px;
+  border-color:black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.face {
+  border-color: black;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+}
+
+.tile {
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.top {
+  position: absolute;
+  left: 20%;
+}
+
+.front {
+  position: absolute;
+  top: 210px;
+  left: 20%;
+}
+
+.left {
+  position: absolute;
+  top: 210px;
+  left: 12.75%;
+  transform: translate(-50%, 0%);
+}
+.right {
+  position: absolute;
+  top: 210px;
+  left: 41.7%;
+  transform: translate(-50%, 0%);
+}
+.back {
+  position: absolute;
+  top: 210px;
+  left: 56.25%;
+  transform: translate(-50%, 0%);
+}
+.bottom {
+  position: absolute;
+  top: 412.5px;
+  left: 27.25%;
+  transform: translate(-50%, 0%);
+}
+.top > .tiles > .tile {
+  background-color: var(--white);
+}
+.front > .tiles > .tile {
+  background-color: var(--blue);
+}
+.left > .tiles > .tile {
+  background-color: var(--red);
+}
+.right > .tiles > .tile {
+  background-color: var(--orange);
+}
+.back > .tiles > .tile {
+  background-color: var(--green);
+}
+.bottom > .tiles > .tile {
+  background-color: var(--yellow);
+}

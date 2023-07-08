@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>5x5 Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="rubiksstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <button><span>Solve!</span></button>
+        <div class="cube">
+            <div class="face top">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="top-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="face front">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="front-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="face left">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="left-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="face right">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="right-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="face back">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="back-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="face bottom">
+                <div class="tiles">
+                    <script>
+                        for (let i = 1; i <= 25; i++) {
+                            document.write(`<div class="tile" id="bottom-${i}"></div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="rubiksscript.js"></script>
+</body>
